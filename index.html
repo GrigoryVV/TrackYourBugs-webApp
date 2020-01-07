@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="favicon.png" type="image/png">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="node_modules/materialize-css/dist/css/materialize.min.css"  media="screen,projection"/>
+    <!--Import stylesheets-->
+    <link type="text/css" rel="stylesheet" href="css/style.css"/>
+    <link type="text/css" rel="stylesheet" href="css/chips.css"/>
+    <link type="text/css" rel="stylesheet" href="css/modal.css"/>
+    <title>Track Your Bugs</title>
+</head>
+<body>
+    <!-- Login page Header -->
+    <header class="login-header">
+        <div class="container">
+            <div class="row">
+                <div class="col s8 m8 l8 center-align">
+                    <h1 class="login-title">Track Your Bugs</h1>
+                </div>
+                <div class="col s2 m2 l2 right-align">
+                    <button class="modal-show btn waves-effect waves-light" data-modal="#signin-form">Login</button>
+                </div>
+                <div class="col s2 m2 l2 left-align">
+                    <button class="modal-show btn waves-effect waves-light" data-modal="#signup-form">Register</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--/ Login page Header -->
+    
+    <!-- Modal window of registration -->
+    <div class="modal-wrap hide" id="signup-form">
+        <div class="modal-window">
+            <div class="slider-container">
+                <div class="slider-main">
+                    <div class="row">
+                        <div class="col s12 right-align">
+                            <button class="modal-close btn-small waves-effect waves-teal btn-flat circle">
+                                <i class="material-icons tiny center">close</i>
+                            </button>
+                        </div>
+                    </div>
+                    <form>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input placeholder="Your name" name="name" id="signup-name" type="text" maxlength="40" data-rule="name">
+                                <label for="signup-name">Name</label>
+                            </div>
+                            <div class="input-field col s12">
+                                <input placeholder="Your password" name="pass" id="signup-pass" type="password" maxlength="20" data-rule="pass">
+                                <label for="signup-pass">Password</label>
+                            </div>
+                            <div class="input-field col s12">
+                                <input placeholder="Repeat your password" name="pass-checker" id="signup-pass-checker" type="password" maxlength="20">
+                                <label for="signup-pass-checker">Repeat password</label>
+                            </div>
+                            <div class="input-field col s12">
+                                <input placeholder="Your email" name="email" id="signup-email" type="email" maxlength="40" data-rule="email">
+                                <label for="signup-email">Email</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input placeholder="YYYY-MM-DD" type="text" name="birthday" id="signup-birthday" class="datepicker" maxlength="10" data-rule="date">
+                                <label for="signup-birthday">Birthday</label>
+                            </div>
+                            <div class="col s6">
+                                <p>Sex</p>
+                                <p>
+                                    <label>
+                                        <input type="radio" name="sex" value="male" class="signup-sex" checked>
+                                        <span>Male</span>
+                                    </label>
+                                </p>
+                                <p>
+                                    <label>
+                                        <input type="radio" name="sex" value="female" class="signup-sex">
+                                        <span>Female</span>
+                                    </label>
+                                </p>
+                                <p>
+                                    <label>
+                                        <input type="radio" name="sex" value="other" class="signup-sex">
+                                        <span>Other</span>
+                                    </label>
+                                </p>
+                            </div>
+                            <div class="col s12 center-align">
+                                <p class="slider-read"">
+                                    Read rules &rarr;
+                                </p>
+                            </div>
+                            <div class="col s12 center-align">
+                                <p>
+                                    <label>
+                                      <input type="checkbox" class="filled-in" id="rules-agreed"/>
+                                      <span>I Agree</span>
+                                    </label>
+                                </p>
+                            </div>
+                            <div class="col s12 center-align">
+                                <button class="btn waves-effect waves-light disabled" id="signup-submit">
+                                    Register
+                                    <i class="material-icons right">assignment_turned_in</i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="slider-info">
+                    <div class="row">
+                        <div class="col s12">
+                            <p class="slider-read-back"">
+                                &larr; Back
+                            </p>
+                            <p>
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro repudiandae labore aliquid, numquam exercitationem non dicta aut eius, suscipit vero consequatur, ducimus laboriosam consectetur asperiores. Quam in reprehenderit sapiente aut.
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt voluptatibus, tenetur maiores similique, laboriosam eius doloribus asperiores excepturi illo dignissimos sint ab repellendus! In laborum, tempora a nisi soluta temporibus!
+                            </p>
+                            <p>
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro repudiandae labore aliquid, numquam exercitationem non dicta aut eius, suscipit vero consequatur, ducimus laboriosam consectetur asperiores. Quam in reprehenderit sapiente aut.
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt voluptatibus, tenetur maiores similique, laboriosam eius doloribus asperiores excepturi illo dignissimos sint ab repellendus! In laborum, tempora a nisi soluta temporibus!
+                            </p>
+                            <p>
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro repudiandae labore aliquid, numquam exercitationem non dicta aut eius, suscipit vero consequatur, ducimus laboriosam consectetur asperiores. Quam in reprehenderit sapiente aut.
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt voluptatibus, tenetur maiores similique, laboriosam eius doloribus asperiores excepturi illo dignissimos sint ab repellendus! In laborum, tempora a nisi soluta temporibus!
+                            </p>
+                            <p>
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro repudiandae labore aliquid, numquam exercitationem non dicta aut eius, suscipit vero consequatur, ducimus laboriosam consectetur asperiores. Quam in reprehenderit sapiente aut.
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt voluptatibus, tenetur maiores similique, laboriosam eius doloribus asperiores excepturi illo dignissimos sint ab repellendus! In laborum, tempora a nisi soluta temporibus!
+                            </p>
+                            <p>
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro repudiandae labore aliquid, numquam exercitationem non dicta aut eius, suscipit vero consequatur, ducimus laboriosam consectetur asperiores. Quam in reprehenderit sapiente aut.
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt voluptatibus, tenetur maiores similique, laboriosam eius doloribus asperiores excepturi illo dignissimos sint ab repellendus! In laborum, tempora a nisi soluta temporibus!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/ Modal window of registration -->
+
+    <!-- Modal window of login -->
+    <div class="modal-wrap hide" id="signin-form">
+        <div class="modal-window">
+            <div class="row">
+                <div class="col s12 right-align">
+                    <button class="modal-close btn-small waves-effect waves-teal btn-flat circle">
+                        <i class="material-icons tiny center">close</i>
+                    </button>
+                </div>
+            </div>
+            <form>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input placeholder="Your email" name="email" id="signin-email" type="email" maxlength="40" data-rule="email">
+                        <label for="signin-email">Email</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input placeholder="Your password" name="pass" id="signin-pass" type="password" maxlength="20">
+                        <label for="signin-pass">Password</label>
+                    </div>
+                    <div class="col s12 center-align">
+                        <button class="btn waves-effect waves-light" id="signin-submit">
+                            Login
+                            <i class="material-icons right">exit_to_app</i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!--/ Modal window of login -->
+
+    <!-- How to use block -->
+    <div class="container explainer">
+        <div class="explainer-wrapper">
+            <div class="explainer-steps-wrap">
+                <div data-step="1" class="explainer-step step-active">
+                    1. Enter to the cabinet
+                </div>
+                <div data-step="2" class="explainer-step">
+                    2. Creating a new project
+                </div>
+                <div data-step="3" class="explainer-step">
+                    3. Addition of bugs
+                </div>
+                <div data-step="4" class="explainer-step">
+                    4. Editing bugs
+                </div>
+                <div data-step="5" class="explainer-step">
+                    5. Editing user data
+                </div>
+            </div>
+            <div class="explainer-img-wrap">
+                <div data-step="1" class="explainer-img">
+                    <img src="img/1-step.jpg" alt="First Step">
+                    <p>First step is to create an account or sign in with existing one. You can use test account if you don't want to create new one. <b>email: test@mail.ru | password: test</b></p>
+                </div>
+                <div data-step="2" class="explainer-img hide">
+                    <img src="img/2-step.jpg" alt="Second Step">
+                    <p>When you entered the cabinet you can create a project in which you will track bugs. You can give a name and description, also the datetime and creator email will be saved automatically. After all, new project card will be added below so you can start working with it.</p>
+                </div>
+                <div data-step="3" class="explainer-img hide">
+                    <img src="img/3-step.jpg" alt="Third Step">
+                    <p>To enter the project bug menu you need to click on its card. Firstly, in bug menu you need to add a new bug. It's simmilar to the project creation proccess. The new bug is always created with the "open" status. You can change it in the future.</p>
+                </div>
+                <div data-step="4" class="explainer-img hide">
+                    <img src="img/4-step.jpg" alt="Fourth Step">
+                    <p>To edit a bug you need to click on the bug row in the table. In the open modal window you will be able to change a name, description and status. To save the changes puch the "update" button below.</p>
+                </div>
+                <div data-step="5" class="explainer-img hide">
+                    <img src="img/5-step.jpg" alt="Fifth Step">
+                    <p>To edit the user data you need to click on the "User Information" button in the left side menu. Here you can change a name, password, birthday and sex of the user. To save the changes puch the "update" button below.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/ How to use block -->
+
+    <script src="script/ajax.js"></script>
+    <script src="script/signup_signin.js"></script>
+    <script src="script/chips.js"></script>
+    <script src="script/modal.js"></script>
+    <script src="script/slider.js"></script>
+    <script src="script/inputsValidator.js"></script>
+    <script src="script/explainer_gallery.js"></script>
+    
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="node_modules/materialize-css/dist/js/materialize.min.js"></script>
+</body>
+</html>

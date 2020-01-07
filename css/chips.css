@@ -1,0 +1,28 @@
+.chips {
+    padding: 10px 20px;
+    margin: 20px 10px;
+    border-radius: 12px;
+}
+
+.chips-info {
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+}
+
+.chips-error {
+    background: rgba(219, 0, 0, 0.6);
+    color: #fff;
+}
+
+.chips-success {
+    background: #26a69a;
+    color: #fff;
+}
+
+.chips-field {
+    width: 200px;
+    position: fixed;
+    right: 30px;
+    top: 20px;
+    z-index: 99;
+}

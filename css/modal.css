@@ -1,0 +1,52 @@
+.modal-wrap {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+}
+
+.modal-window {
+    width: 320px;
+    border: 1px solid #666;
+    border-radius: 10px;
+    background: white;
+    padding: 10px;
+    z-index: 10;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider-container {
+    display: flex;
+    width: 200%;
+    margin-left: 0;
+    transition: all ease 1s;
+}
+
+.slider-main {
+    width: 50%;
+    float: left;
+    min-height: 50px;
+}
+.slider-info {
+    width: 50%;
+    overflow-y: scroll;
+    float: left;
+    min-height: 50px;
+    max-height: 723px;
+}
+
+.slider-read, .slider-read-back {
+    cursor: pointer;
+    transition: 200ms;
+}
+
+.slider-read:hover, .slider-read-back:hover {
+    color: #26a69a;
+}
